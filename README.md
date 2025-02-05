@@ -6,14 +6,12 @@ Desenvolver um sistema de cadastro de usuários e autenticação (login). O foco
 Requisitos do Projeto:
 
 1. Tecnologias Obrigatórias:
- - Backend: Node.js com Express.
- - Persistência de Dados: Utilizenão relacional (MongoDB, etc.), desde que a aplicação esteja containerizada com Docker.
  - Validação e Tratamento de Erros: O sistema deve validar os campos de entrada e lidar adequadamente com erros.
 
 2. Funcionalidades Mínimas:
- - Cadastro de usuários com campos básicos (nome, e-mail, senha).
- - Login com autenticação (JWT ou outro método de sua escolha).
- - Rota protegida que só pode ser acessada por usuários autenticados.
+ - Cadastro de usuários com campos básicos (nome, e-mail, senha). X
+ - Login com autenticação (JWT ou ouatro método de sua escolha).
+ - Rota protegida que só pode ser cessada por usuários autenticados.
  - Documentação básica das rotas (pode ser um README ou usar Swagger).
 
 O que será avaliado:
@@ -24,7 +22,17 @@ O que será avaliado:
 - Domínio de Node.js e JavaScript.
 
 Diferenciais que Contam Pontos Extras:
-- Uso do Docker: Para containerização da aplicação e do banco de dados.
-- TypeScript: Utilização para garantir tipagem estática.
-- PrismaORM: Para gerenciar a comunicação com o banco de dados de forma eficiente.
 - Testes Automatizados: Cobertura com testes unitários e/ou de integração.
+
+Comandos para iniciar projeto com Docker
+
+Iniciar container
+docker-compose up --build -d
+
+Parar container 
+docker-compose down
+
+Tecnologias usadas
+Node JS Express com TypeScript
+Docker
+Jest
