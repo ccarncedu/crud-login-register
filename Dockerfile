@@ -4,17 +4,17 @@ FROM node:18
 # Criar e definir diretório de trabalho
 WORKDIR /app
 
-# Copiar package.json e package-lock.json
-COPY package*.json ./
+# Copiar package.json e yarn.lock
+COPY package.json yarn.lock ./
 
 # Instalar dependências
-RUN npm install
+RUN yarn install
 
 # Copiar o restante do código do projeto
 COPY . .
 
 # Expor a porta
-EXPOSE 8080
+EXPOSE 80
 
 # Comando para iniciar a aplicação
-CMD ["npm", "run", "dev"]
+CMD ["yarn", "dev"]

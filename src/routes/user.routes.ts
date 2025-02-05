@@ -1,11 +1,58 @@
 import { Router } from 'express';
 import { register, login } from '../controllers/user.controller';
 
+const userRouter = Router();
 
-const router = Router();
+/**
+ * @swagger
+ * /user/register:
+ *   post:
+ *     summary: Registra um novo usuário
+ *     tags: [User]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *     responses:
+ *       201:
+ *         description: Usuário registrado com sucesso
+ *       400:
+ *         description: Erro ao registrar usuário
+ */
+userRouter.post('/register', register);
 
-router.post('/register', register);
-router.post('/login', login);
+/**
+ * @swagger
+ * /user/login:
+ *   post:
+ *     summary: Faz login de um usuário
+ *     tags: [User]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Login bem-sucedido
+ *       401:
+ *         description: Credenciais inválidas
+ */
+userRouter.post('/login', login);
 
-
-export default router;
+export default userRouter;

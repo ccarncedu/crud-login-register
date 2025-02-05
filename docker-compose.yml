@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mongo:
-    image: mongo:latest
+    image: mongo:4.4.6-bionic
     container_name: mongodb_container
     restart: always
     ports:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - mongo
     ports:
-      - "8080:8080"
+      - "80:80"
     env_file:
       - .env
     volumes:
