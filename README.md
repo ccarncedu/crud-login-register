@@ -38,4 +38,11 @@ Express Jwt
 yarn run test
 ```
 
+Prints do sistema de registro e login
+![image](https://github.com/user-attachments/assets/a0710343-bdb1-4ac5-b29b-e177b9949f09)
+![image](https://github.com/user-attachments/assets/f1b18bb7-d302-4fe6-ad29-eca5b2107872)
+![image](https://github.com/user-attachments/assets/588453ba-73fc-483d-bb04-ab39b2af3227)
+![image](https://github.com/user-attachments/assets/50aebb2a-35a2-4137-87b3-a10258ff0784)
+
+
 Perfil Github: https://github.com/educcarnn
