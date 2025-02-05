@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { register, login } from '../controllers/auth.controller';
+import { authenticateJWT } from '../middlewares/auth.middleware';
 
 const userRouter = Router();
 
@@ -53,6 +54,6 @@ userRouter.post('/register', register);
  *       401:
  *         description: Credenciais inválidas
  */
-userRouter.post('/login', login);
+userRouter.post('/login', authenticateJWT, login);
 
 export default userRouter;

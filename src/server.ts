@@ -40,9 +40,11 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use('/', routes);
-app.use('/user', userRouter); 
+app.use('/user', userRouter);
 
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
   console.log(`Documentação disponível em http://localhost:${port}/api-docs`);
 });
+
+export default app;
