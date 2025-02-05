@@ -15,9 +15,6 @@ docker-compose up --build -d
 
 Parar container 
 docker-compose down
-
-Rodar testes unitários
-yarn run test
 ```
 
 
